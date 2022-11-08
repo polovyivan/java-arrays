@@ -16,7 +16,7 @@ public class AccessToArrayElements {
             System.out.println("tutorialArray element at index " + i + " is " + tutorialArray[i]);
         }
 
-        System.out.println("Backward(reverse) for loop");
+        System.out.println("Backward (reverse) for loop");
         for (int i = tutorialArray.length - 1; i >= 0; i--) {
             System.out.println("tutorialArray element at index " + i + " is " + tutorialArray[i]);
         }
@@ -60,18 +60,23 @@ public class AccessToArrayElements {
         System.out.println("Get arrays elements using Stream ");
         Arrays.stream(tutorialArray).forEach(System.out::println);
 
-        System.out.println("Get multidimensional array elements");
+        System.out.println("Get multidimensional array elements using for loop");
         int[][] multidimensionalArray = new int[][] {
                 { 1, 2, 3, 4, 5 },
                 { 1, 2, 3, 4, 5 },
                 { 1, 2, 3, 4, 5 } };
 
         for (int i = 0; i < multidimensionalArray.length; i++) {
-
             for (int j = 0; j < multidimensionalArray[i].length; j++) {
-                System.out.println("Element et index  = " + i + " " + j + " = " + multidimensionalArray[i][j]);
+                System.out.println("Element at index  = " + i + "-" + j + " = " + multidimensionalArray[i][j]);
             }
+        }
 
+        System.out.println("Get multidimensional array elements using for each loop");
+        for (int[] firstDimension : multidimensionalArray) {
+            for (int secondDimension : firstDimension) {
+                System.out.println(secondDimension);
+            }
         }
 
     }
